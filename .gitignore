@@ -2,3 +2,4 @@
 /log/*.log
 /cache
 /lib/vendor/symfony
+**.DS_Store
