@@ -1,0 +1,32 @@
+Excursion:
+  actAs:
+    Timestampable: ~
+  columns:
+    title:        { type: string(255), notnull: true }
+    description:  { type: string(5000), notnull: true }
+    content:      { type: blob, notnull: true }
+    is_publish:   { type: boolean, default: true }
+    city_id:      { type: integer, notnull: true }
+  relations:
+    ExcursionCategory:  { refClass: ExcursionCategoryRelations, local: excursion_id, foreign: category_id, foreignAlias: Excursions }
+    ExcursionCity:      { onDelete: CASCADE, local: city_id, foreign: id, foreignAlias: Excursions }
+
+ExcursionCategory:
+  actAs:
+    Timestampable: ~
+  columns:
+    title:        { type: string(255), notnull: true }
+
+ExcursionCategoryRelations:
+  columns:
+    excursion_id: { type: integer, primary: true }
+    category_id:  { type: integer, primary: true }
+  relations:
+    Excursion:          { onDelete: CASCADE, local: excursion_id, foreign: id }
+    ExcursionCategory:  { onDelete: CASCADE, local: category_id, foreign: id }
+
+ExcursionCity:
+  actAs:
+    Timestampable: ~
+  columns:
+    title:        { type: string(255), notnull: true }

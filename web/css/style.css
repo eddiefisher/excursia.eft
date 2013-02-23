@@ -1,0 +1,28 @@
+body{background-color:white;color:#444}
+.header{background:white url('/images/header.png') repeat-x bottom;height:50px;}
+.logo{background-color:#444;overflow:auto;height:50px;}
+.logo a{text-decoration:none}
+.logo h1{padding:0px 15px 0;color:#EEE;font-size:33px;margin:0;}
+.menu ul{list-style:none;height:40px;}
+.menu ul li{float:left;display:inline;}
+.menu ul li a{display:block;height:50px;line-height:50px;margin-right:1px;letter-spacing:2px;
+	text-align:center;text-transform:uppercase;font-size:12px;color:white;border:none;}
+.menu ul li a:hover{text-decoration:none;}
+.ex_list {
+	width: 50%;
+	float: left;
+}
+.title {margin-bottom: 0;}
+.title a {
+border: none;
+text-align: left;
+/*text-transform: uppercase;*/
+font-weight: normal;
+color: #148DFB;
+}
+.ex_city {margin-bottom: 20px;}
+.ex_city .desc {padding-left: 5px;}
+ul.ex_3_list li{
+	width: 26%;
+	float: left;
+}
